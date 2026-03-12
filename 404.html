@@ -3,17 +3,17 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>favoriiklim</title>
+    <title>ilker coskunsel</title>
     <base href="/"/>
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/app.css"/>
     <link rel="icon" type="image/png" href="favicon.png"/>
     <link href="CVWeb.styles.css" rel="stylesheet"/>
+    <script data-goatcounter="https://favoriiklim.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
 <div id="app">
 </div>
-
 
 <script src="_framework/blazor.webassembly.js"></script>
 
@@ -21,16 +21,24 @@
     let lastScrollTop = 0;
     window.addEventListener("scroll", function () {
         let hud = document.querySelector('.hud-bar');
-        if (!hud) return;
-
         let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-        if (currentScroll > lastScrollTop && currentScroll > 80) {
-            hud.classList.add('hud-hidden');
-        } else {
-            hud.classList.remove('hud-hidden');
+        // SENİN ORİJİNAL HUD KODUN
+        if (hud) {
+            if (currentScroll > lastScrollTop && currentScroll > 80) {
+                hud.classList.add('hud-hidden');
+            } else {
+                hud.classList.remove('hud-hidden');
+            }
         }
         lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+
+        // EKLENEN ÇARK DÖNDÜRME KODU
+        let gears = document.querySelectorAll('.scroll-gear');
+        gears.forEach(function(gear) {
+            let speed = parseFloat(gear.getAttribute('data-speed'));
+            gear.style.transform = `rotate(${currentScroll * speed}deg)`;
+        });
     }, false);
 </script>
 </body>
