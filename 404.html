@@ -1,45 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>İlker Coşkunsel</title>
-    <base href="/"/>
-    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="css/app.css"/>
-    <link rel="icon" type="image/png" href="favicon.png"/>
-    <link href="CVWeb.styles.css" rel="stylesheet"/>
-    <script data-goatcounter="https://favoriiklim.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>İlker Coşkunsel</title>
+  <link rel="canonical" href="https://ilkercoskunsel.com/" />
+  <script>
+    // GitHub Pages SPA routing fallback.
+    // Captures the path from the URL and stores it, then redirects to root.
+    (function() {
+      var path = window.location.pathname;
+      var search = window.location.search;
+      var hash = window.location.hash;
+
+      // Encode the path as a query param and redirect to root
+      if (path !== '/') {
+        sessionStorage.setItem('redirect-path', path + search + hash);
+        window.location.replace('/?p=' + encodeURIComponent(path + search + hash));
+      }
+    })();
+  </script>
 </head>
 <body>
-<div id="app">
-</div>
-
-<script src="_framework/blazor.webassembly.js"></script>
-
-<script>
-    let lastScrollTop = 0;
-    window.addEventListener("scroll", function () {
-        let hud = document.querySelector('.hud-bar');
-        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
-        // SENİN ORİJİNAL HUD KODUN
-        if (hud) {
-            if (currentScroll > lastScrollTop && currentScroll > 80) {
-                hud.classList.add('hud-hidden');
-            } else {
-                hud.classList.remove('hud-hidden');
-            }
-        }
-        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-
-        // EKLENEN ÇARK DÖNDÜRME KODU
-        let gears = document.querySelectorAll('.scroll-gear');
-        gears.forEach(function(gear) {
-            let speed = parseFloat(gear.getAttribute('data-speed'));
-            gear.style.transform = `rotate(${currentScroll * speed}deg)`;
-        });
-    }, false);
-</script>
+  <p style="font-family:monospace;padding:40px;color:#c4a7e7;">REDIRECTING...</p>
 </body>
 </html>

@@ -1,7 +1,22 @@
+# Build outputs
 [Bb]in/
 [Oo]bj/
+
+# Visual Studio
 *.user
 *.suo
 *.ide
 .DS_Store
 Thumbs.db
+
+# Blazor publish artifacts (not stored in this repo)
+_framework/
+lib/
+*.wasm
+*.wasm.br
+*.wasm.gz
+CVWeb.styles.css
+CVWeb.styles.css.br
+CVWeb.styles.css.gz
+CVWeb.staticwebassets.endpoints.json
+web.config

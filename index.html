@@ -1,45 +1,411 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html-root">
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>İlker Coşkunsel</title>
-    <base href="/"/>
-    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="css/app.css"/>
-    <link rel="icon" type="image/png" href="favicon.png"/>
-    <link href="CVWeb.styles.css" rel="stylesheet"/>
-    <script data-goatcounter="https://favoriiklim.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary Meta -->
+  <title>İlker Coşkunsel | Aerospace Engineering &amp; Software Development</title>
+  <meta name="description" content="Portfolio of İlker Coşkunsel, an Aerospace Engineering student and software developer working on CubeSat systems, ground station software, telemetry and simulations." />
+  <meta name="author" content="İlker Coşkunsel" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://ilkercoskunsel.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ilkercoskunsel.com/" />
+  <meta property="og:title" content="İlker Coşkunsel | Aerospace &amp; Software" />
+  <meta property="og:description" content="Aerospace Engineering student working on CubeSat systems, ground station software and simulations." />
+  <meta property="og:image" content="https://ilkercoskunsel.com/icon-192.png" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="tr_TR" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="İlker Coşkunsel | Aerospace &amp; Software" />
+  <meta name="twitter:description" content="Aerospace Engineering student working on CubeSat systems, ground station software and simulations." />
+  <meta name="twitter:image" content="https://ilkercoskunsel.com/icon-192.png" />
+
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="en" href="https://ilkercoskunsel.com/" />
+  <link rel="alternate" hreflang="tr" href="https://ilkercoskunsel.com/" />
+  <link rel="alternate" hreflang="x-default" href="https://ilkercoskunsel.com/" />
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/app.css" />
+
+  <!-- Analytics — privacy-friendly, no cookies -->
+  <script data-goatcounter="https://favoriiklim.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "İlker Coşkunsel",
+    "url": "https://ilkercoskunsel.com",
+    "sameAs": [
+      "https://github.com/favoriiklim",
+      "https://linkedin.com/in/ilkercoskunsel"
+    ],
+    "jobTitle": "Aerospace Engineering Student & Software Developer",
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "OSTİM Technical University"
+    },
+    "knowsAbout": [
+      "CubeSat Systems",
+      "Ground Station Software",
+      "Telemetry",
+      "Aerospace Engineering",
+      "C#",
+      ".NET",
+      "Blazor",
+      "Java",
+      "Spring",
+      "Unity"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "İlker Coşkunsel Portfolio",
+    "url": "https://ilkercoskunsel.com"
+  }
+  </script>
 </head>
-<body>
-<div id="app">
-</div>
+<body id="portfolio-body">
 
-<script src="_framework/blazor.webassembly.js"></script>
+  <!-- Skip to content (accessibility) -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<script>
-    let lastScrollTop = 0;
-    window.addEventListener("scroll", function () {
-        let hud = document.querySelector('.hud-bar');
-        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+  <!-- ══════════════════════════════════════════════════════════
+       GEAR BACKGROUND (decorative)
+  ══════════════════════════════════════════════════════════════ -->
+  <div class="scroll-gear-bg" aria-hidden="true">
+    <div class="gear-wrapper gear-1">
+      <svg class="scroll-gear" data-speed="0.04" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <use href="#gear-icon" />
+      </svg>
+    </div>
+    <div class="gear-wrapper gear-2">
+      <svg class="scroll-gear" data-speed="-0.03" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <use href="#gear-icon" />
+      </svg>
+    </div>
+    <div class="gear-wrapper gear-3">
+      <svg class="scroll-gear" data-speed="0.06" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <use href="#gear-icon" />
+      </svg>
+    </div>
+  </div>
 
-        // SENİN ORİJİNAL HUD KODUN
+  <!-- Hidden SVG gear definition -->
+  <svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <symbol id="gear-icon" viewBox="0 0 100 100">
+        <path fill="currentColor" d="M43.1 2.1l-3.2 9.5a37.5 37.5 0 0 0-8.9 3.7L21.7 11l-9.6 9.6 4.3 9.3a37.5 37.5 0 0 0-3.7 8.9L2.1 42l-.1.8v14.3l.8.3 9.5 3.2a37.5 37.5 0 0 0 3.7 8.9L11 78.3 20.6 88l9.3-4.3a37.5 37.5 0 0 0 8.9 3.7L42 97.9l.8.1h14.3l.3-.8 3.2-9.5a37.5 37.5 0 0 0 8.9-3.7L78.3 89 88 79.4l-4.3-9.3a37.5 37.5 0 0 0 3.7-8.9L97.9 58l.1-.8V42.8l-.8-.3-9.5-3.2a37.5 37.5 0 0 0-3.7-8.9L89 21.7 79.4 12l-9.3 4.3a37.5 37.5 0 0 0-8.9-3.7L58 2.1 57.2 2H42.8zm7 22.4a25.5 25.5 0 1 1 0 51 25.5 25.5 0 0 1 0-51z"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ══════════════════════════════════════════════════════════
+       START SCREEN
+  ══════════════════════════════════════════════════════════════ -->
+  <section id="start-screen" class="start-screen" aria-label="Intro screen" role="dialog" aria-modal="true">
+    <div class="ss-inner">
+      <div class="ss-border">
+        <div class="ss-player-row">
+          <span id="ss-player-label" class="ss-player-label">PLAYER:</span>
+          <span id="ss-name" class="ss-name">İLKER COŞKUNSEL</span>
+        </div>
+        <hr class="ss-divider" />
+        <div id="ss-roles" class="ss-roles">
+          <div class="ss-role">Aerospace Engineering Student</div>
+          <div class="ss-role">Software Developer</div>
+          <div class="ss-role">CubeSat Project Lead</div>
+        </div>
+        <div class="ss-buttons">
+          <button id="ss-enter-btn" class="ss-enter-btn" type="button">[ ENTER PORTFOLIO ]</button>
+          <button id="ss-skip-btn" class="ss-skip-btn" type="button">[ SKIP INTRO ]</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       PORTFOLIO WRAPPER
+  ══════════════════════════════════════════════════════════════ -->
+  <div id="portfolio-wrapper" class="portfolio-wrapper">
+
+    <!-- ── HUD NAVIGATION ────────────────────────────────────── -->
+    <header class="hud-bar" role="banner">
+      <div class="hud-inner">
+
+        <!-- Logo -->
+        <a href="#hero" class="hud-logo" aria-label="İlker Coşkunsel — Home">IC</a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hud-nav" aria-label="Main navigation">
+          <a href="#about" class="hud-item" id="nav-about">ABOUT</a>
+          <a href="#experience" class="hud-item" id="nav-experience">EXPERIENCE</a>
+          <a href="#projects" class="hud-item" id="nav-projects">PROJECTS</a>
+          <a href="#competitions" class="hud-item" id="nav-competitions">COMPETITIONS</a>
+          <a href="#skills" class="hud-item" id="nav-skills">SKILLS</a>
+          <a href="#contact" class="hud-item" id="nav-contact">CONTACT</a>
+        </nav>
+
+        <!-- Controls -->
+        <div class="hud-controls">
+          <button
+            id="nav-lang-toggle"
+            class="hud-item"
+            type="button"
+            aria-label="Switch to Turkish"
+            onclick="portfolioToggleLang()"
+          >TR</button>
+          <span class="hud-divider" aria-hidden="true">|</span>
+          <button
+            id="nav-theme-toggle"
+            class="hud-item"
+            type="button"
+            aria-label="Toggle color theme"
+            onclick="portfolioToggleTheme()"
+          >THEME</button>
+        </div>
+
+        <!-- Hamburger (mobile) -->
+        <button
+          id="mobile-menu-toggle"
+          class="hud-hamburger"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="mobile-nav-menu"
+        >☰</button>
+      </div>
+    </header>
+
+    <!-- Mobile Nav Dropdown -->
+    <nav id="mobile-nav-menu" class="mobile-nav-menu" aria-label="Mobile navigation">
+      <a href="#about"        class="mobile-nav-item" id="mob-nav-about">ABOUT</a>
+      <a href="#experience"   class="mobile-nav-item" id="mob-nav-experience">EXPERIENCE</a>
+      <a href="#projects"     class="mobile-nav-item" id="mob-nav-projects">PROJECTS</a>
+      <a href="#competitions" class="mobile-nav-item" id="mob-nav-competitions">COMPETITIONS</a>
+      <a href="#skills"       class="mobile-nav-item" id="mob-nav-skills">SKILLS</a>
+      <a href="#contact"      class="mobile-nav-item" id="mob-nav-contact">CONTACT</a>
+      <div class="mobile-nav-controls">
+        <button id="mobile-lang-toggle"  class="mobile-nav-item" type="button" onclick="portfolioToggleLang()">TR</button>
+        <button id="mobile-theme-toggle" class="mobile-nav-item" type="button" onclick="portfolioToggleTheme()">THEME</button>
+      </div>
+    </nav>
+
+    <!-- ── MAIN CONTENT ──────────────────────────────────────── -->
+    <main id="main-content" class="portfolio-content">
+
+      <!-- ── HERO / ABOUT ──────────────────────────────────── -->
+      <section id="about" class="section hero-section" aria-labelledby="hero-heading">
+        <h1 id="hero-title" class="hero-title">
+          Aerospace Engineering Student &amp; Software Developer
+        </h1>
+        <p id="hero-bio1" class="hero-bio">
+          I am an Aerospace Engineering student and software developer working on CubeSat systems, ground station software, telemetry architectures, simulations and web applications.
+        </p>
+        <p id="hero-bio2" class="hero-bio">
+          I enjoy turning complex technical ideas into functional and testable prototypes through iterative development. My current focus is building ground station software and supporting the system engineering activities of the OTUSAT CubeSat project.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" id="hero-projects-btn" class="pixel-btn">View Projects</a>
+          <a href="https://github.com/favoriiklim" id="link-github" target="_blank" rel="noopener noreferrer" class="pixel-btn pixel-btn-ghost" data-track-github aria-label="GitHub profile">GitHub ↗</a>
+          <a href="https://linkedin.com/in/ilkercoskunsel" id="link-linkedin" target="_blank" rel="noopener noreferrer" class="pixel-btn pixel-btn-ghost" data-track-linkedin aria-label="LinkedIn profile">LinkedIn ↗</a>
+          <a href="#contact" id="hero-contact-btn" class="pixel-btn pixel-btn-alt">Contact</a>
+        </div>
+      </section>
+
+      <!-- ── CURRENT FOCUS ─────────────────────────────────── -->
+      <section id="focus" class="section" aria-labelledby="focus-title">
+        <h2 id="focus-section-title" class="section-title">▸ CURRENT FOCUS</h2>
+        <div id="focus-cards" class="focus-grid">
+          <!-- Rendered by JS -->
+        </div>
+      </section>
+
+      <!-- ── EXPERIENCE ────────────────────────────────────── -->
+      <section id="experience" class="section" aria-labelledby="experience-title">
+        <h2 id="experience-section-title" class="section-title">▸ EXPERIENCE</h2>
+        <div id="experience-list">
+          <!-- Rendered by JS -->
+        </div>
+      </section>
+
+      <!-- ── PROJECTS ──────────────────────────────────────── -->
+      <section id="projects" class="section" aria-labelledby="projects-title">
+        <h2 id="projects-section-title" class="section-title">▸ PROJECTS</h2>
+
+        <div class="projects-category">
+          <h3 id="projects-cat-title-aerospace" class="projects-cat-title">Aerospace &amp; Space</h3>
+          <div id="projects-cat-aerospace" class="projects-grid">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <div class="projects-category">
+          <h3 id="projects-cat-title-software" class="projects-cat-title">Software &amp; Web</h3>
+          <div id="projects-cat-software" class="projects-grid">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <div class="projects-category">
+          <h3 id="projects-cat-title-games" class="projects-cat-title">Games &amp; Prototypes</h3>
+          <div id="projects-cat-games" class="projects-grid">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ── COMPETITIONS ──────────────────────────────────── -->
+      <section id="competitions" class="section" aria-labelledby="competitions-title">
+        <h2 id="competitions-section-title" class="section-title">▸ COMPETITIONS &amp; HACKATHONS</h2>
+        <div id="competitions-list">
+          <!-- Rendered by JS -->
+        </div>
+      </section>
+
+      <!-- ── SKILLS ────────────────────────────────────────── -->
+      <section id="skills" class="section" aria-labelledby="skills-title">
+        <h2 id="skills-section-title" class="section-title">▸ TECHNICAL SKILLS</h2>
+        <div id="skills-grid" class="skills-grid">
+          <!-- Rendered by JS -->
+        </div>
+      </section>
+
+      <!-- ── EDUCATION ─────────────────────────────────────── -->
+      <section id="education" class="section" aria-labelledby="education-title">
+        <h2 id="education-section-title" class="section-title">▸ EDUCATION &amp; INTERESTS</h2>
+        <div class="quest-card edu-card">
+          <div class="edu-main">
+            <p id="edu-degree" class="edu-degree-title">Aerospace Engineering</p>
+            <p id="edu-university" class="edu-university">OSTİM Technical University</p>
+          </div>
+          <div class="edu-interests">
+            <h3 id="edu-interests-title" class="edu-interests-title">Areas of Interest</h3>
+            <ul id="edu-interests-list" class="edu-interests-list">
+              <!-- Rendered by JS -->
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── CONTACT ───────────────────────────────────────── -->
+      <section id="contact" class="section" aria-labelledby="contact-heading">
+        <h2 id="contact-section-title" class="section-title">▸ CONTACT</h2>
+        <div class="quest-card contact-card">
+          <h3 id="contact-title" class="contact-title">Get in Touch</h3>
+          <p id="contact-description" class="contact-description">
+            Feel free to contact me regarding CubeSat projects, software development, technical collaborations and project opportunities.
+          </p>
+          <div class="contact-links">
+            <a
+              id="contact-github-link"
+              href="https://github.com/favoriiklim"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="pixel-btn"
+              data-track-github
+              aria-label="GitHub profile"
+            >
+              <span class="contact-link-icon" aria-hidden="true">⌨</span>
+              <span id="contact-github-label">GitHub</span> ↗
+            </a>
+            <a
+              id="contact-linkedin-link"
+              href="https://linkedin.com/in/ilkercoskunsel"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="pixel-btn pixel-btn-alt"
+              data-track-linkedin
+              aria-label="LinkedIn profile"
+            >
+              <span class="contact-link-icon" aria-hidden="true">◈</span>
+              <span id="contact-linkedin-label">LinkedIn</span> ↗
+            </a>
+            <a
+              id="contact-email-link"
+              href="mailto:ilker@ilkercoskunsel.com"
+              class="pixel-btn pixel-btn-ghost"
+              aria-label="Send email"
+            >
+              <span class="contact-link-icon" aria-hidden="true">✉</span>
+              <span id="contact-email-label">Email</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ── FOOTER ──────────────────────────────────────────── -->
+    <footer class="footer-bar" role="contentinfo">
+      <div class="footer-inner">
+        <div class="footer-links">
+          <a id="footer-github-link" href="https://github.com/favoriiklim" target="_blank" rel="noopener noreferrer" class="footer-link" data-track-github aria-label="GitHub">GitHub</a>
+          <a id="footer-linkedin-link" href="https://linkedin.com/in/ilkercoskunsel" target="_blank" rel="noopener noreferrer" class="footer-link" data-track-linkedin aria-label="LinkedIn">LinkedIn</a>
+          <a href="mailto:ilker@ilkercoskunsel.com" class="footer-link" aria-label="Email">Email</a>
+        </div>
+        <div class="footer-meta">
+          <span id="footer-system" class="footer-sys">SYSTEM: ONLINE</span>
+          <span id="footer-location">Ankara, Turkey</span>
+        </div>
+        <p id="footer-made-with" class="footer-made">Made with pixel art &amp; ☕</p>
+      </div>
+    </footer>
+
+  </div><!-- /portfolio-wrapper -->
+
+  <!-- Scroll + Gear Script (inline for critical timing) -->
+  <script>
+    (function() {
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReduced) return;
+
+      let lastScrollTop = 0;
+      window.addEventListener('scroll', function() {
+        const hud = document.querySelector('.hud-bar');
+        const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
         if (hud) {
-            if (currentScroll > lastScrollTop && currentScroll > 80) {
-                hud.classList.add('hud-hidden');
-            } else {
-                hud.classList.remove('hud-hidden');
-            }
+          if (currentScroll > lastScrollTop && currentScroll > 80) {
+            hud.classList.add('hud-hidden');
+          } else {
+            hud.classList.remove('hud-hidden');
+          }
         }
         lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 
-        // EKLENEN ÇARK DÖNDÜRME KODU
-        let gears = document.querySelectorAll('.scroll-gear');
-        gears.forEach(function(gear) {
-            let speed = parseFloat(gear.getAttribute('data-speed'));
-            gear.style.transform = `rotate(${currentScroll * speed}deg)`;
+        document.querySelectorAll('.scroll-gear').forEach(function(gear) {
+          const speed = parseFloat(gear.getAttribute('data-speed') || '0.04');
+          gear.style.transform = 'rotate(' + (currentScroll * speed) + 'deg)';
         });
-    }, false);
-</script>
+      }, { passive: true });
+    })();
+  </script>
+
+  <!-- Content data -->
+  <script src="js/content.js"></script>
+  <!-- Portfolio logic -->
+  <script src="js/portfolio.js"></script>
+
 </body>
 </html>
