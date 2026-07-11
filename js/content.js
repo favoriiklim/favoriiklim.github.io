@@ -23,7 +23,7 @@ window.portfolioContent = {
         "Yazılım Geliştirici",
         "Veri Tabanı & Veri Yönetimi Meraklısı",
       ],
-      enterBtn: "[ PORTFÖYE GİR ]",
+      enterBtn: "[ SİSTEME GİRİŞ ]",
       skipBtn: "[ GİRİŞİ GEÇ ]",
       loadingText: "SİSTEM YÜKLENİYOR...",
     },
@@ -43,7 +43,7 @@ window.portfolioContent = {
     // --- HERO ---
     hero: {
       title: "Bilgisayar Mühendisliği Öğrencisi & Yazılım Geliştirici",
-      bio1: "OSTİM Teknik Üniversitesi'nde 2. sınıf Bilgisayar Mühendisliği öğrencisiyim. C# ve SQL başta olmak üzere çeşitli programlama dillerinde ve teknolojilerinde deneyim sahibiyim.",
+      bio1: "OSTİM Teknik Üniversitesi'nde 3. sınıf Bilgisayar Mühendisliği öğrencisiyim. C# ve SQL başta olmak üzere çeşitli programlama dillerinde ve teknolojilerinde deneyim sahibiyim.",
       bio2: "Farklı açılardan düşünerek yaratıcı çözümler üretmeyi seviyorum. Öğrenmeye hevesliyim ve özellikle veri tabanı ile veri yönetimi alanlarında bilgi ve becerilerimi geliştirmeye yüksek bir motivasyonum var. Bu doğrultuda erkenden projeler üreterek pratik tecrübemi artırmayı hedefliyorum.",
       viewProjects: "Projeleri Gör",
       contact: "İletişim",
@@ -106,6 +106,23 @@ window.portfolioContent = {
       },
       items: [
         {
+          id: "cubesat-groundstation",
+          category: "aerospace",
+          name: "CubeSat Yer İstasyonu Yazılımı",
+          description:
+            "OTUSAT CubeSat projesi için telemetri verilerini dinleyen, görselleştiren ve uyduyu komuta eden yer istasyonu yazılımı.",
+          role: "Yazılım Geliştirici",
+          responsibilities: [
+            "Seri port (UART) üzerinden gelen telemetri paketlerinin çözümlenmesi",
+            "Sensör verilerinin (sıcaklık, basınç, ivme) gerçek zamanlı grafiklerle gösterilmesi",
+            "Uyduya komut gönderim arayüzü ve veritabanı loglama sistemi"
+          ],
+          technologies: ["C#", "Windows Forms / WPF", "SQL", "Serial Communication"],
+          status: "Devam Ediyor",
+          repoUrl: null,
+          demoUrl: null,
+        },
+        {
           id: "monad-task",
           category: "aerospace",
           name: "Görev ve Stajyer Yönetim Sistemi",
@@ -143,6 +160,23 @@ window.portfolioContent = {
           ],
           status: "Tamamlandı",
           repoUrl: "https://github.com/GoktugSaylam/Budget",
+          demoUrl: null,
+        },
+        {
+          id: "tank-coop",
+          category: "games",
+          name: "Co-op Tank Yönetim Oyunu",
+          description:
+            "Tankı doğrudan kontrol etmek yerine, tankı içeriden yöneten insan mürettebatı kontrol ettiğimiz co-op strateji oyunu prototipi.",
+          role: "Oyun Geliştirici",
+          responsibilities: [
+            "Mürettebatın tank içi görevlere (sürüş, ateş, tamir) atanması mekanikleri",
+            "Kooperatif çok oyunculu (Co-op) senkronizasyon altyapısı",
+            "Oyun döngüsü ve görev yönetim sistemleri"
+          ],
+          technologies: ["Unity", "C#", "Multiplayer/Netcode"],
+          status: "Devam Ediyor",
+          repoUrl: null,
           demoUrl: null,
         },
         {
@@ -194,18 +228,35 @@ window.portfolioContent = {
           repoLabel: "Repository",
         },
         {
-          id: "gamejam-comp",
-          name: "48 Saatlik Game Jam Projeleri",
+          id: "metu-gates",
+          name: "METU GATES Jam 2026",
           type: "Game Jam",
           project: null,
           teamSize: null,
-          description:
-            "Unity ve C# kullanarak kısıtlı süre içinde oynanabilir mekanikler, temel oyun sistemleri ve çalışan prototipler geliştirdim.",
+          description: "GATES öğrenci topluluğu tarafından düzenlenen ODTÜ game jam etkinliği.",
           features: [],
           technologies: ["Unity", "C#"],
-          repoUrl: null,
-          repoLabel: null,
+          repoUrl: "https://itch.io/jam/gatesjam-2026/rate/4380174",
+          repoLabel: "Oyun Sayfası",
         },
+        {
+          id: "global-game-jam",
+          name: "Global Game Jam ATOM 2026",
+          type: "Game Jam",
+          project: null,
+          teamSize: null,
+          description: "Dünya çapında düzenlenen 48 saatlik oyun geliştirme maratonunun ATOM (ODTÜ Teknokent) ayağı.",
+          features: [],
+          technologies: ["Unity", "C#"],
+          repoUrl: "https://globalgamejam.org/games/2026/little-mask-2",
+          repoLabel: "Oyun Sayfası",
+        }
+      ],
+      otherJamsTitle: "Diğer Katıldığım Game Jam'ler",
+      otherJams: [
+        "OSTIMTECH Jam 2026",
+        "AyazJam 2025",
+        "OSTIMTECH Jam 2025"
       ],
     },
 
@@ -241,7 +292,7 @@ window.portfolioContent = {
     // --- EDUCATION ---
     education: {
       sectionTitle: "▸ EĞİTİM & İLGİ ALANLARI",
-      degree: "Bilgisayar Mühendisliği (2. Sınıf - Not Ort: 2.86)",
+      degree: "Bilgisayar Mühendisliği (3. Sınıf - Not Ort: 3.01)",
       university: "OSTİM Teknik Üniversitesi (2024 - Devam Ediyor)",
       interestsTitle: "İlgi Alanları",
       interests: [
@@ -317,7 +368,7 @@ window.portfolioContent = {
         "Software Developer",
         "Database & Data Management Enthusiast",
       ],
-      enterBtn: "[ ENTER PORTFOLIO ]",
+      enterBtn: "[ ENTER SYSTEM ]",
       skipBtn: "[ SKIP INTRO ]",
       loadingText: "LOADING SYSTEMS...",
     },
@@ -337,7 +388,7 @@ window.portfolioContent = {
     // --- HERO ---
     hero: {
       title: "Computer Engineering Student & Software Developer",
-      bio1: "I am a 2nd year Computer Engineering student at OSTİM Technical University. I have experience in various programming languages and technologies, especially C# and SQL.",
+      bio1: "I am a 3rd year Computer Engineering student at OSTİM Technical University. I have experience in various programming languages and technologies, especially C# and SQL.",
       bio2: "I enjoy thinking outside the box to generate creative solutions. I am eager to learn and highly motivated to develop my skills in database administration and data management. I aim to build projects and gain early experience.",
       viewProjects: "View Projects",
       contact: "Contact",
@@ -400,6 +451,23 @@ window.portfolioContent = {
       },
       items: [
         {
+          id: "cubesat-groundstation",
+          category: "aerospace",
+          name: "CubeSat Ground Station Software",
+          description:
+            "Ground station software for the OTUSAT CubeSat project, responsible for listening, visualizing telemetry data and sending commands to the satellite.",
+          role: "Software Developer",
+          responsibilities: [
+            "Parsing telemetry packets received via serial port (UART)",
+            "Real-time visualization of sensor data (temperature, pressure, acceleration) via charts",
+            "Satellite command transmission interface and database logging system"
+          ],
+          technologies: ["C#", "Windows Forms / WPF", "SQL", "Serial Communication"],
+          status: "Ongoing",
+          repoUrl: null,
+          demoUrl: null,
+        },
+        {
           id: "monad-task",
           category: "aerospace",
           name: "Task & Intern Management Application",
@@ -437,6 +505,23 @@ window.portfolioContent = {
           ],
           status: "Completed",
           repoUrl: "https://github.com/GoktugSaylam/Budget",
+          demoUrl: null,
+        },
+        {
+          id: "tank-coop",
+          category: "games",
+          name: "Co-op Tank Crew Management Game",
+          description:
+            "A co-op strategy game prototype where you control the human crew managing a tank from the inside, rather than controlling the tank directly.",
+          role: "Game Developer",
+          responsibilities: [
+            "Crew assignment mechanics for interior tank duties (driving, shooting, repairing)",
+            "Cooperative multiplayer (Co-op) synchronization architecture",
+            "Core game loop and task management systems"
+          ],
+          technologies: ["Unity", "C#", "Multiplayer/Netcode"],
+          status: "Ongoing",
+          repoUrl: null,
           demoUrl: null,
         },
         {
@@ -488,18 +573,35 @@ window.portfolioContent = {
           repoLabel: "View Repository",
         },
         {
-          id: "gamejam-comp",
-          name: "48-Hour Game Jam Projects",
+          id: "metu-gates",
+          name: "METU GATES Jam 2026",
           type: "Game Jam",
           project: null,
           teamSize: null,
-          description:
-            "Developed playable mechanics, core game systems and functional prototypes under strict time constraints using Unity and C#.",
+          description: "METU game jam event organized by the GATES student community.",
           features: [],
           technologies: ["Unity", "C#"],
-          repoUrl: null,
-          repoLabel: null,
+          repoUrl: "https://itch.io/jam/gatesjam-2026/rate/4380174",
+          repoLabel: "Game Page",
         },
+        {
+          id: "global-game-jam",
+          name: "Global Game Jam ATOM 2026",
+          type: "Game Jam",
+          project: null,
+          teamSize: null,
+          description: "The ATOM (METU Technopolis) leg of the 48-hour global game development marathon.",
+          features: [],
+          technologies: ["Unity", "C#"],
+          repoUrl: "https://globalgamejam.org/games/2026/little-mask-2",
+          repoLabel: "Game Page",
+        }
+      ],
+      otherJamsTitle: "Other Game Jams Attended",
+      otherJams: [
+        "OSTIMTECH Jam 2026",
+        "AyazJam 2025",
+        "OSTIMTECH Jam 2025"
       ],
     },
 
@@ -535,7 +637,7 @@ window.portfolioContent = {
     // --- EDUCATION ---
     education: {
       sectionTitle: "▸ EDUCATION & INTERESTS",
-      degree: "Computer Engineering (Sophomore - GPA: 2.86)",
+      degree: "Computer Engineering (Junior - GPA: 3.01)",
       university: "OSTİM Technical University (2024 - Present)",
       interestsTitle: "Areas of Interest",
       interests: [

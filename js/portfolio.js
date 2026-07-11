@@ -7,7 +7,6 @@
   // ── Constants ────────────────────────────────────────────────
   const STORAGE_LANG = "portfolio-lang";
   const STORAGE_THEME = "portfolio-theme";
-  const STORAGE_VISITED = "portfolio-visited";
 
   const LINKS = {
     github: "https://github.com/favoriiklim",
@@ -30,7 +29,6 @@
     initLang();
     renderAll();
     initStartScreen();
-    initScrollBehavior();
     initMobileMenu();
     initSmoothScroll();
     populateStaticLinks();
@@ -60,7 +58,6 @@
     }
     currentTheme = theme;
     localStorage.setItem(STORAGE_THEME, theme);
-    trackEvent("theme_change", theme);
   }
 
   function toggleTheme() {
@@ -84,7 +81,6 @@
     localStorage.setItem(STORAGE_LANG, lang);
     document.documentElement.lang = lang;
     renderAll();
-    trackEvent("lang_change", lang);
   }
 
   function toggleLang() {
@@ -159,7 +155,6 @@
     }
 
     setText("ss-enter-btn", ss.enterBtn);
-    setText("ss-skip-btn", ss.skipBtn);
   }
 
   // ── Hero render ───────────────────────────────────────────────
@@ -169,6 +164,12 @@
     setText("hero-bio2", hero.bio2);
     setText("hero-projects-btn", hero.viewProjects);
     setText("hero-contact-btn", hero.contact);
+
+    // CV button label
+    const cvBtn = document.getElementById("hero-cv-btn");
+    if (cvBtn) {
+      cvBtn.textContent = "📄 " + (hero.downloadCv || "CV") + " ↓";
+    }
   }
 
   // ── Current Focus render ──────────────────────────────────────
@@ -260,11 +261,11 @@
         : "planned";
 
     const repoBtn = item.repoUrl
-      ? `<a href="${item.repoUrl}" target="_blank" rel="noopener noreferrer" class="pixel-btn pixel-btn-sm" onclick="trackPortfolioEvent('project_repo_click','${item.id}')">${labels.viewRepo} ↗</a>`
+      ? `<a href="${item.repoUrl}" target="_blank" rel="noopener noreferrer" class="pixel-btn pixel-btn-sm">${labels.viewRepo} ↗</a>`
       : "";
 
     const demoBtn = item.demoUrl
-      ? `<a href="${item.demoUrl}" target="_blank" rel="noopener noreferrer" class="pixel-btn pixel-btn-sm pixel-btn-alt" onclick="trackPortfolioEvent('project_demo_click','${item.id}')">${labels.viewDemo} ↗</a>`
+      ? `<a href="${item.demoUrl}" target="_blank" rel="noopener noreferrer" class="pixel-btn pixel-btn-sm pixel-btn-alt">${labels.viewDemo} ↗</a>`
       : "";
 
     const respList =
@@ -314,7 +315,7 @@
     container.innerHTML = competitions.items
       .map((item) => {
         const featuresList =
-          item.features.length
+          item.features && item.features.length
             ? `<div class="comp-section">
               <div class="comp-label">${labels.features}</div>
               <ul class="comp-list">
@@ -324,7 +325,7 @@
             : "";
 
         const techList =
-          item.technologies.length
+          item.technologies && item.technologies.length
             ? `<div class="comp-section">
               <div class="comp-label">${labels.technologies}</div>
               <div class="tech-tags">
@@ -335,13 +336,14 @@
 
         const repoBtn =
           item.repoUrl
-            ? `<a href="${item.repoUrl}" target="_blank" rel="noopener noreferrer" class="pixel-btn pixel-btn-sm" onclick="trackPortfolioEvent('comp_repo_click','${item.id}')">${item.repoLabel} ↗</a>`
+            ? `<a href="${item.repoUrl}" target="_blank" rel="noopener noreferrer" class="pixel-btn pixel-btn-sm">${item.repoLabel} ↗</a>`
             : "";
 
         const metaItems = [
           item.type ? `<span class="comp-type">🎮 ${item.type}</span>` : "",
           item.project ? `<span class="comp-project">📦 ${item.project}</span>` : "",
           item.teamSize ? `<span class="comp-team">👥 ${item.teamSize}</span>` : "",
+          item.date ? `<span class="comp-date">📅 ${item.date}</span>` : "",
         ]
           .filter(Boolean)
           .join("");
@@ -357,6 +359,19 @@
           </article>`;
       })
       .join("");
+
+    if (competitions.otherJams && competitions.otherJams.length > 0) {
+      const title = competitions.otherJamsTitle || "Diğer Etkinlikler";
+      const otherJamsHtml = `
+        <div class="skill-category quest-card" style="margin-top: 24px;">
+          <h3 class="skill-cat-title">${title}</h3>
+          <div class="skill-items">
+            ${competitions.otherJams.map((jam) => `<span class="skill-tag">${jam}</span>`).join("")}
+          </div>
+        </div>
+      `;
+      container.innerHTML += otherJamsHtml;
+    }
   }
 
   // ── Skills render ─────────────────────────────────────────────
@@ -405,7 +420,6 @@
 
   // ── Footer render ─────────────────────────────────────────────
   function renderFooter(footer) {
-    setText("footer-system", footer.system);
     setText("footer-location", footer.location);
     setText("footer-made-with", footer.madeWith);
   }
@@ -417,47 +431,38 @@
   }
 
   // ── Start Screen ──────────────────────────────────────────────
+  // ALWAYS shows on every visit — no localStorage skip
   function initStartScreen() {
     const screen = document.getElementById("start-screen");
     const enterBtn = document.getElementById("ss-enter-btn");
-    const skipBtn = document.getElementById("ss-skip-btn");
 
     if (!screen) return;
 
-    const visited = localStorage.getItem(STORAGE_VISITED);
-    if (visited) {
-      hideStartScreen(true);
-      return;
-    }
+    // Always show the start screen
+    screen.style.display = "flex";
+    screen.style.opacity = "1";
 
-    if (prefersReducedMotion) {
-      hideStartScreen(true);
-      return;
-    }
-
-    screen.classList.remove("hidden");
+    // Hide portfolio wrapper until enter
+    const portfolio = document.getElementById("portfolio-wrapper");
+    if (portfolio) portfolio.style.display = "none";
 
     if (enterBtn) {
       enterBtn.addEventListener("click", () => {
-        enterBtn.classList.add("mario-jump");
-        setTimeout(() => hideStartScreen(false), 800);
+        if (prefersReducedMotion) {
+          hideStartScreen(true);
+        } else {
+          enterBtn.classList.add("mario-jump");
+          setTimeout(() => hideStartScreen(false), 800);
+        }
       });
     }
 
-    if (skipBtn) {
-      skipBtn.addEventListener("click", () => {
-        hideStartScreen(false);
-      });
-    }
-
-    document.addEventListener("keydown", (e) => {
-      if (
-        e.key === "Enter" ||
-        e.key === " " ||
-        e.key === "Escape"
-      ) {
-        if (!screen.classList.contains("hidden")) {
-          hideStartScreen(false);
+    // Also allow Enter/Space/Escape to dismiss
+    document.addEventListener("keydown", function handler(e) {
+      if (e.key === "Enter" || e.key === " " || e.key === "Escape") {
+        if (screen.style.display !== "none") {
+          hideStartScreen(prefersReducedMotion);
+          document.removeEventListener("keydown", handler);
         }
       }
     });
@@ -467,8 +472,6 @@
     const screen = document.getElementById("start-screen");
     const portfolio = document.getElementById("portfolio-wrapper");
     if (!screen) return;
-
-    localStorage.setItem(STORAGE_VISITED, "1");
 
     if (instant) {
       screen.style.display = "none";
@@ -489,38 +492,6 @@
         });
       }
     }, 500);
-  }
-
-  // ── Scroll Behavior ───────────────────────────────────────────
-  function initScrollBehavior() {
-    if (prefersReducedMotion) return;
-
-    let lastScrollTop = 0;
-    window.addEventListener(
-      "scroll",
-      function () {
-        const hud = document.querySelector(".hud-bar");
-        const currentScroll =
-          window.pageYOffset || document.documentElement.scrollTop;
-
-        if (hud) {
-          if (currentScroll > lastScrollTop && currentScroll > 80) {
-            hud.classList.add("hud-hidden");
-          } else {
-            hud.classList.remove("hud-hidden");
-          }
-        }
-
-        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-
-        const gears = document.querySelectorAll(".scroll-gear");
-        gears.forEach(function (gear) {
-          const speed = parseFloat(gear.getAttribute("data-speed") || "0.05");
-          gear.style.transform = `rotate(${currentScroll * speed}deg)`;
-        });
-      },
-      { passive: true }
-    );
   }
 
   // ── Mobile Menu ───────────────────────────────────────────────
@@ -575,43 +546,15 @@
 
   // ── Static Links ──────────────────────────────────────────────
   function populateStaticLinks() {
-    setHref("link-github", LINKS.github);
-    setHref("link-linkedin", LINKS.linkedin);
-    setHref("link-email", LINKS.email);
     setHref("contact-github-link", LINKS.github);
     setHref("contact-linkedin-link", LINKS.linkedin);
     setHref("contact-email-link", LINKS.email);
-    setHref("footer-github-link", LINKS.github);
-    setHref("footer-linkedin-link", LINKS.linkedin);
-
-    document.querySelectorAll("[data-track-github]").forEach((el) => {
-      el.addEventListener("click", () => trackEvent("github_click", LINKS.github));
-    });
-    document.querySelectorAll("[data-track-linkedin]").forEach((el) => {
-      el.addEventListener("click", () => trackEvent("linkedin_click", LINKS.linkedin));
-    });
   }
 
   function setHref(id, href) {
     const el = document.getElementById(id);
     if (el) el.href = href;
   }
-
-  // ── Analytics ─────────────────────────────────────────────────
-  function trackEvent(name, value) {
-    try {
-      if (window.goatcounter && window.goatcounter.count) {
-        window.goatcounter.count({
-          path: `event-${name}-${value}`,
-          title: `${name}: ${value}`,
-          event: true,
-        });
-      }
-    } catch (_) {}
-  }
-
-  // Expose for inline onclick use
-  window.trackPortfolioEvent = trackEvent;
 
   // ── Global Exports ────────────────────────────────────────────
   window.portfolioToggleTheme = toggleTheme;
