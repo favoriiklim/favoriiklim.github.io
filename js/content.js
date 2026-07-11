@@ -7,21 +7,21 @@ window.portfolioContent = {
     htmlLang: "tr",
 
     // --- META ---
-    metaTitle: "İlker Coşkunsel | Havacılık ve Uzay Mühendisliği & Yazılım",
+    metaTitle: "İlker Coşkunsel | Bilgisayar Mühendisliği & Yazılım",
     metaDescription:
-      "CubeSat sistemleri, yer istasyonu yazılımları, telemetri ve simülasyonlar üzerine çalışan Havacılık ve Uzay Mühendisliği öğrencisi ve yazılım geliştirici İlker Coşkunsel'in portföyü.",
-    ogTitle: "İlker Coşkunsel | Havacılık & Yazılım",
+      "OSTİM Teknik Üniversitesi Bilgisayar Mühendisliği öğrencisi ve yazılım geliştirici İlker Coşkunsel'in kişisel portföyü.",
+    ogTitle: "İlker Coşkunsel | Bilgisayar Mühendisliği & Yazılım",
     ogDescription:
-      "CubeSat sistemleri, yer istasyonu yazılımları ve simülasyonlar üzerine çalışan mühendis.",
+      "Bilgisayar Mühendisliği öğrencisi ve yazılım geliştirici.",
 
     // --- START SCREEN ---
     startScreen: {
       player: "OYUNCU:",
       name: "İLKER COŞKUNSEL",
       roles: [
-        "Havacılık ve Uzay Mühendisliği Öğrencisi",
+        "Bilgisayar Mühendisliği Öğrencisi",
         "Yazılım Geliştirici",
-        "CubeSat Proje Lideri",
+        "Veri Tabanı & Veri Yönetimi Meraklısı",
       ],
       enterBtn: "[ PORTFÖYE GİR ]",
       skipBtn: "[ GİRİŞİ GEÇ ]",
@@ -42,9 +42,9 @@ window.portfolioContent = {
 
     // --- HERO ---
     hero: {
-      title: "Havacılık ve Uzay Mühendisliği Öğrencisi & Yazılım Geliştirici",
-      bio1: "CubeSat sistemleri, yer istasyonu yazılımları, telemetri mimarileri, simülasyonlar ve web uygulamaları üzerine çalışan bir Havacılık ve Uzay Mühendisliği öğrencisi ve yazılım geliştiriciyim.",
-      bio2: "Karmaşık teknik fikirleri yinelemeli geliştirme süreçleriyle çalışan ve test edilebilir prototiplere dönüştürmeyi seviyorum. Güncel odağım OTUSAT CubeSat projesinin yer istasyonu yazılımını geliştirmek ve sistem mühendisliği faaliyetlerini yürütmektir.",
+      title: "Bilgisayar Mühendisliği Öğrencisi & Yazılım Geliştirici",
+      bio1: "OSTİM Teknik Üniversitesi'nde 2. sınıf Bilgisayar Mühendisliği öğrencisiyim. C# ve SQL başta olmak üzere çeşitli programlama dillerinde ve teknolojilerinde deneyim sahibiyim.",
+      bio2: "Farklı açılardan düşünerek yaratıcı çözümler üretmeyi seviyorum. Öğrenmeye hevesliyim ve özellikle veri tabanı ile veri yönetimi alanlarında bilgi ve becerilerimi geliştirmeye yüksek bir motivasyonum var. Bu doğrultuda erkenden projeler üreterek pratik tecrübemi artırmayı hedefliyorum.",
       viewProjects: "Projeleri Gör",
       contact: "İletişim",
     },
@@ -54,19 +54,19 @@ window.portfolioContent = {
       sectionTitle: "▸ GÜNCEL ODAK",
       cards: [
         {
-          icon: "📡",
-          title: "CubeSat Yer İstasyonu",
-          body: "C# ve .NET tabanlı bir yer istasyonu yazılımı için telemetri üretimi, paket ayrıştırma, görselleştirme ve veri tabanı kayıt mimarisi üzerinde çalışıyorum.",
+          icon: "💻",
+          title: "Nesne Yönelimli Programlama",
+          body: "C#, ADO.NET ve Unity ortamlarında OOP standartlarına ve temiz kod prensiplerine uygun mimariler kurmak.",
         },
         {
-          icon: "🛰️",
-          title: "OTUSAT CubeSat",
-          body: "1U Dünya gözlem CubeSat projesinde proje lideri ve sistem mühendisi olarak alt sistemlerin koordinasyonu, görev gereksinimleri ve sistem mimarisi üzerinde çalışıyorum.",
+          icon: "💾",
+          title: "Veri Yönetimi & SQL",
+          body: "İlişkisel veri tabanları tasarımı, sorgu optimizasyonu ve MS SQL Server / Oracle veritabanı yönetim sistemleri üzerinde çalışıyorum.",
         },
         {
-          icon: "✈️",
-          title: "Havacılık Yazılımı & Simülasyon",
-          body: "Havacılık ve uzay uygulamalarında kullanılabilecek telemetri, simülasyon ve teknik yazılım araçları geliştiriyorum.",
+          icon: "🛠️",
+          title: "Staj ve Hackathon Projeleri",
+          body: "Gerçek dünya tecrübesi kazanmak için bütçe yönetimi, görev ve stajyer takip araçları gibi pratik backend/frontend uygulamaları geliştiriyorum.",
         },
       ],
     },
@@ -80,7 +80,7 @@ window.portfolioContent = {
           company: "Monad Yazılım",
           location: "Ankara, Türkiye",
           date: "1–19 Haziran 2026",
-          status: "Tamamlandı",
+          status: "Completed",
           description:
             "Java, Spring ve Vaadin kullanarak rol tabanlı bir görev ve stajyer yönetim uygulaması geliştirdim.",
           responsibilities: [
@@ -100,60 +100,40 @@ window.portfolioContent = {
     projects: {
       sectionTitle: "▸ PROJELER",
       categories: {
-        aerospace: "Havacılık & Uzay",
+        aerospace: "Veri Tabanı & Sistem",
         software: "Yazılım & Web",
         games: "Oyunlar & Prototipler",
       },
       items: [
         {
-          id: "otusat",
+          id: "monad-task",
           category: "aerospace",
-          name: "OTUSAT CubeSat",
-          description: "1U Dünya gözlem CubeSat projesi.",
-          role: "Proje Lideri ve Sistem Mühendisi",
-          responsibilities: [
-            "Görev hedeflerinin ve sistem gereksinimlerinin oluşturulması",
-            "Alt sistem ekiplerinin koordinasyonu",
-            "Sistem mimarisi",
-            "Telemetri ve yer istasyonu planlaması",
-            "Yazılım ekibinin yönlendirilmesi",
-            "Alt sistem entegrasyon planları",
-          ],
-          technologies: [],
-          status: "Devam Ediyor",
-          repoUrl: null,
-          demoUrl: null,
-        },
-        {
-          id: "groundstation",
-          category: "aerospace",
-          name: "CubeSat Yer İstasyonu",
+          name: "Görev ve Stajyer Yönetim Sistemi",
           description:
-            "Uydu telemetrilerini üreten, ayrıştıran, görüntüleyen ve veri tabanına kaydeden modüler bir yer istasyonu yazılımı geliştirme çalışması.",
-          role: "Geliştirici",
+            "Rol tabanlı yetkilendirmeye sahip görev ve stajyer yönetim uygulaması. Admin, Mentor ve Viewer rollerine göre farklı ekranlar ve yetkiler sunar.",
+          role: "Stajyer Geliştirici",
           responsibilities: [
-            "Telemetri üretici",
-            "Paket ayrıştırıcı",
-            "Gerçek zamanlı veri görüntüleme",
-            "Uydu konum haritası",
-            "Arka planda veri tabanı kaydı",
-            "Geçmiş telemetri sorgulama",
-            "TUI/CLI prototipleri",
-            "İlerleyen aşamada Blazor tabanlı kullanıcı arayüzü",
+            "Spring Boot tabanlı katmanlı backend mimarisi tasarımı",
+            "Vaadin ile dinamik, kullanıcı dostu arayüz geliştirme",
+            "Oracle SQL veri modeli tasarımı ve entegrasyonu",
           ],
-          technologies: ["C#", ".NET", "Blazor", "SQL"],
-          status: "Devam Ediyor",
+          technologies: ["Java", "Spring Boot", "Vaadin", "Oracle DB", "SQL"],
+          status: "Tamamlandı",
           repoUrl: null,
           demoUrl: null,
         },
         {
           id: "budget",
           category: "software",
-          name: "Budget",
+          name: "Budget (Bütçe Yönetimi)",
           description:
             "Dört kişilik ekiple 24 saatte geliştirilen finansal yönetim uygulaması. GDG OSTIMTECH Hackathon '26.",
           role: "Geliştirici",
-          responsibilities: [],
+          responsibilities: [
+            "ASP.NET Core ve Blazor WebAssembly entegrasyonu",
+            "SQLite veritabanı yapısı ve veri yönetim modülleri",
+            "Yahoo Finance API entegrasyonu ve portföy analiz ekranları",
+          ],
           technologies: [
             "ASP.NET Core",
             "Blazor WebAssembly",
@@ -166,31 +146,16 @@ window.portfolioContent = {
           demoUrl: null,
         },
         {
-          id: "monad-task",
-          category: "software",
-          name: "Görev Yönetim Uygulaması",
-          description:
-            "Rol tabanlı görev ve stajyer yönetim uygulaması. Admin, Mentor ve Viewer rollerine göre farklı yetkiler sunan; görev, stajyer ve değerlendirme yönetimi sağlayan bir uygulama.",
-          role: "Stajyer Geliştirici",
-          responsibilities: [],
-          technologies: [
-            "Java",
-            "Spring",
-            "Vaadin",
-            "Oracle Database",
-          ],
-          status: "Tamamlandı",
-          repoUrl: null,
-          demoUrl: null,
-        },
-        {
           id: "gamejam",
           category: "games",
           name: "Game Jam Projeleri",
           description:
-            "Unity ve C# kullanarak kısıtlı süre içinde oynanabilir mekanikler, temel oyun sistemleri ve çalışan prototipler geliştirdim.",
+            "Unity ve C# kullanarak kısıtlı süreler içinde oynanabilir mekanikler, temel oyun sistemleri ve çalışan prototipler geliştirdim.",
           role: "Oyun Geliştirici",
-          responsibilities: [],
+          responsibilities: [
+            "Hızlı prototipleme ve fizik tabanlı mekaniklerin kodlanması",
+            "Karakter kontrolcüleri ve oyun döngüsü tasarımı"
+          ],
           technologies: ["Unity", "C#"],
           status: "Çeşitli",
           repoUrl: null,
@@ -212,13 +177,11 @@ window.portfolioContent = {
           description:
             "Dört kişilik bir ekiple 24 saat içinde finansal yönetim uygulaması geliştirdik.",
           features: [
-            "Bütçe takibi",
+            "Bütçe takibi ve analizleri",
             "Gelir ve gider yönetimi",
-            "Portföy yönetimi",
-            "Harcama analizi",
-            "Finansal metriklerin görüntülenmesi",
-            "Google OAuth ile giriş",
-            "Yahoo Finance API üzerinden piyasa verileri",
+            "Portföy yönetimi ve harcama analizi",
+            "Google OAuth ile güvenli giriş",
+            "Yahoo Finance API üzerinden gerçek zamanlı borsa veri entegrasyonu",
           ],
           technologies: [
             "ASP.NET Core",
@@ -252,33 +215,25 @@ window.portfolioContent = {
       categories: [
         {
           name: "PROGRAMLAMA DİLLERİ",
-          items: ["C#", "Java", "SQL"],
+          items: ["C#", "Java", "SQL", "C"],
         },
         {
-          name: "BACKEND",
-          items: [".NET", "ASP.NET Core", "Spring"],
+          name: "NESNE YÖNELİMLİ YAZILIM",
+          items: [".NET", "ADO.NET", "Spring Boot", "Vaadin"],
         },
         {
-          name: "FRONTEND",
-          items: ["Blazor", "Vaadin", "HTML", "CSS"],
-        },
-        {
-          name: "VERİ TABANLARI",
+          name: "VERI YÖNETİMİ & VERİ TABANLARI",
           items: [
+            "SQL",
+            "Microsoft SQL Server",
             "Oracle Database",
             "PostgreSQL",
             "SQLite",
-            "MySQL",
-            "MSSQL",
           ],
         },
         {
-          name: "OYUN & SİMÜLASYON",
-          items: ["Unity", "C# Simülasyon Geliştirme"],
-        },
-        {
-          name: "ARAÇLAR & SİSTEMLER",
-          items: ["Git", "GitHub", "Linux", "Windows", "REST APIs"],
+          name: "OYUN GELİŞTİRME & ARAÇLAR",
+          items: ["Unity", "Git", "GitHub", "REST APIs"],
         },
       ],
     },
@@ -286,18 +241,16 @@ window.portfolioContent = {
     // --- EDUCATION ---
     education: {
       sectionTitle: "▸ EĞİTİM & İLGİ ALANLARI",
-      degree: "Havacılık ve Uzay Mühendisliği",
-      university: "OSTİM Teknik Üniversitesi",
+      degree: "Bilgisayar Mühendisliği (2. Sınıf - Not Ort: 2.86)",
+      university: "OSTİM Teknik Üniversitesi (2024 - Devam Ediyor)",
       interestsTitle: "İlgi Alanları",
       interests: [
-        "Aerodinamik",
-        "Akışkanlar mekaniği",
-        "Isı transferi",
-        "İtki sistemleri",
-        "CubeSat sistem mühendisliği",
-        "Yer istasyonu yazılımları",
-        "Telemetri sistemleri",
-        "Simülasyon",
+        "Veri Tabanı Sistemleri",
+        "Nesne Yönelimli Programlama",
+        "Oyun Geliştirme",
+        "Veri Yönetimi",
+        "Backend Uygulamaları",
+        "Algoritmalar ve Veri Yapıları",
       ],
     },
 
@@ -306,7 +259,7 @@ window.portfolioContent = {
       sectionTitle: "▸ İLETİŞİM",
       title: "İletişime Geç",
       description:
-        "CubeSat projeleri, yazılım geliştirme, teknik iş birlikleri ve proje çalışmaları için iletişime geçebilirsiniz.",
+        "Yazılım geliştirme projeleri, staj ve iş birlikleri için bana aşağıdaki kanallardan ulaşabilirsiniz.",
       github: "GitHub",
       linkedin: "LinkedIn",
       email: "E-posta",
@@ -328,7 +281,7 @@ window.portfolioContent = {
       location: "Konum",
       date: "Tarih",
       responsibilities: "Çalışmalar",
-      features: "Uygulama Özellikleri",
+      features: "Özellikler",
       teamSize: "Takım Büyüklüğü",
       viewRepo: "Repository'yi Gör",
       viewDemo: "Canlı Demo",
@@ -348,21 +301,21 @@ window.portfolioContent = {
 
     // --- META ---
     metaTitle:
-      "İlker Coşkunsel | Aerospace Engineering & Software Development",
+      "İlker Coşkunsel | Computer Engineering & Software Development",
     metaDescription:
-      "Portfolio of İlker Coşkunsel, an Aerospace Engineering student and software developer working on CubeSat systems, ground station software, telemetry and simulations.",
-    ogTitle: "İlker Coşkunsel | Aerospace & Software",
+      "Portfolio of İlker Coşkunsel, a Computer Engineering student and software developer working on database management, C#, Java and Unity.",
+    ogTitle: "İlker Coşkunsel | Computer Engineering & Software",
     ogDescription:
-      "Aerospace Engineering student working on CubeSat systems, ground station software and simulations.",
+      "Computer Engineering student and software developer.",
 
     // --- START SCREEN ---
     startScreen: {
       player: "PLAYER:",
       name: "İLKER COŞKUNSEL",
       roles: [
-        "Aerospace Engineering Student",
+        "Computer Engineering Student",
         "Software Developer",
-        "CubeSat Project Lead",
+        "Database & Data Management Enthusiast",
       ],
       enterBtn: "[ ENTER PORTFOLIO ]",
       skipBtn: "[ SKIP INTRO ]",
@@ -383,9 +336,9 @@ window.portfolioContent = {
 
     // --- HERO ---
     hero: {
-      title: "Aerospace Engineering Student & Software Developer",
-      bio1: "I am an Aerospace Engineering student and software developer working on CubeSat systems, ground station software, telemetry architectures, simulations and web applications.",
-      bio2: "I enjoy turning complex technical ideas into functional and testable prototypes through iterative development. My current focus is building ground station software and supporting the system engineering activities of the OTUSAT CubeSat project.",
+      title: "Computer Engineering Student & Software Developer",
+      bio1: "I am a 2nd year Computer Engineering student at OSTİM Technical University. I have experience in various programming languages and technologies, especially C# and SQL.",
+      bio2: "I enjoy thinking outside the box to generate creative solutions. I am eager to learn and highly motivated to develop my skills in database administration and data management. I aim to build projects and gain early experience.",
       viewProjects: "View Projects",
       contact: "Contact",
     },
@@ -395,19 +348,19 @@ window.portfolioContent = {
       sectionTitle: "▸ CURRENT FOCUS",
       cards: [
         {
-          icon: "📡",
-          title: "CubeSat Ground Station",
-          body: "Working on telemetry generation, packet parsing, visualization and database persistence for a C# and .NET-based CubeSat ground station.",
+          icon: "💻",
+          title: "Object Oriented Programming",
+          body: "Designing systems utilizing C#, ADO.NET and Unity, ensuring clean code principles and OOP standards.",
         },
         {
-          icon: "🛰️",
-          title: "OTUSAT CubeSat",
-          body: "Working as project lead and system engineer on a 1U Earth observation CubeSat, coordinating subsystems, mission requirements and system architecture.",
+          icon: "💾",
+          title: "Data Management & SQL",
+          body: "Working on relational database design, query optimization, and database engines such as MS SQL Server and Oracle DB.",
         },
         {
-          icon: "✈️",
-          title: "Aerospace Software & Simulation",
-          body: "Developing telemetry, simulation and technical software tools for aerospace applications.",
+          icon: "🛠️",
+          title: "Internship & Hackathon Projects",
+          body: "Developing practical backend and frontend tools including budget trackers and evaluation systems to gain hands-on experience.",
         },
       ],
     },
@@ -441,60 +394,40 @@ window.portfolioContent = {
     projects: {
       sectionTitle: "▸ PROJECTS",
       categories: {
-        aerospace: "Aerospace & Space",
+        aerospace: "Database & Systems",
         software: "Software & Web",
         games: "Games & Prototypes",
       },
       items: [
         {
-          id: "otusat",
+          id: "monad-task",
           category: "aerospace",
-          name: "OTUSAT CubeSat",
-          description: "A 1U Earth observation CubeSat project.",
-          role: "Project Lead and System Engineer",
-          responsibilities: [
-            "Mission objectives and system requirements",
-            "Subsystem team coordination",
-            "System architecture",
-            "Telemetry and ground station planning",
-            "Software team coordination",
-            "Subsystem integration planning",
-          ],
-          technologies: [],
-          status: "Ongoing",
-          repoUrl: null,
-          demoUrl: null,
-        },
-        {
-          id: "groundstation",
-          category: "aerospace",
-          name: "CubeSat Ground Station",
+          name: "Task & Intern Management Application",
           description:
-            "A modular ground station software project for generating, parsing, displaying and storing satellite telemetry.",
-          role: "Developer",
+            "A role-based task and intern management application. Provides different dashboards for Admin, Mentor and Viewer roles.",
+          role: "Intern Developer",
           responsibilities: [
-            "Telemetry generator",
-            "Packet parser",
-            "Real-time telemetry visualization",
-            "Satellite position map",
-            "Background database persistence",
-            "Historical telemetry queries",
-            "TUI and CLI prototypes",
-            "Blazor-based user interface in later stages",
+            "Designed a layered backend architecture using Spring Boot",
+            "Built a dynamic UI using Vaadin framework",
+            "Designed schema and relational integrity in Oracle Database",
           ],
-          technologies: ["C#", ".NET", "Blazor", "SQL"],
-          status: "Ongoing",
+          technologies: ["Java", "Spring Boot", "Vaadin", "Oracle DB", "SQL"],
+          status: "Completed",
           repoUrl: null,
           demoUrl: null,
         },
         {
           id: "budget",
           category: "software",
-          name: "Budget",
+          name: "Budget (Financial Tracker)",
           description:
             "A financial management application developed with a four-person team within 24 hours. GDG OSTIMTECH Hackathon '26.",
           role: "Developer",
-          responsibilities: [],
+          responsibilities: [
+            "Integrated Blazor WebAssembly with ASP.NET Core API",
+            "Designed local data modeling with SQLite database integration",
+            "Implemented Yahoo Finance API to calculate and analyze stock portfolios",
+          ],
           technologies: [
             "ASP.NET Core",
             "Blazor WebAssembly",
@@ -507,31 +440,16 @@ window.portfolioContent = {
           demoUrl: null,
         },
         {
-          id: "monad-task",
-          category: "software",
-          name: "Task Management Application",
-          description:
-            "A role-based task and intern management application. Provides task, intern and evaluation management with different permissions for Admin, Mentor and Viewer roles.",
-          role: "Intern Developer",
-          responsibilities: [],
-          technologies: [
-            "Java",
-            "Spring",
-            "Vaadin",
-            "Oracle Database",
-          ],
-          status: "Completed",
-          repoUrl: null,
-          demoUrl: null,
-        },
-        {
           id: "gamejam",
           category: "games",
           name: "Game Jam Projects",
           description:
             "Developed playable mechanics, core game systems and functional prototypes under strict time constraints using Unity and C#.",
           role: "Game Developer",
-          responsibilities: [],
+          responsibilities: [
+            "Rapid prototyping and physics scripting",
+            "Designed character controllers and overall game loop",
+          ],
           technologies: ["Unity", "C#"],
           status: "Various",
           repoUrl: null,
@@ -553,13 +471,11 @@ window.portfolioContent = {
           description:
             "Developed a financial management application with a four-person team within 24 hours.",
           features: [
-            "Budget tracking",
-            "Income and expense management",
-            "Portfolio management",
-            "Expense analysis",
-            "Financial metrics",
-            "Google OAuth authentication",
-            "Market data integration through Yahoo Finance API",
+            "Budget tracking and analytics dashboard",
+            "Income and expense ledger",
+            "Portfolio tracking and analysis",
+            "Secure authorization with Google OAuth",
+            "Market data integration via Yahoo Finance API",
           ],
           technologies: [
             "ASP.NET Core",
@@ -593,33 +509,25 @@ window.portfolioContent = {
       categories: [
         {
           name: "PROGRAMMING LANGUAGES",
-          items: ["C#", "Java", "SQL"],
+          items: ["C#", "Java", "SQL", "C"],
         },
         {
-          name: "BACKEND",
-          items: [".NET", "ASP.NET Core", "Spring"],
+          name: "OBJECT ORIENTED SOFTWARE",
+          items: [".NET", "ADO.NET", "Spring Boot", "Vaadin"],
         },
         {
-          name: "FRONTEND",
-          items: ["Blazor", "Vaadin", "HTML", "CSS"],
-        },
-        {
-          name: "DATABASES",
+          name: "DATA MANAGEMENT & DATABASES",
           items: [
+            "SQL",
+            "Microsoft SQL Server",
             "Oracle Database",
             "PostgreSQL",
             "SQLite",
-            "MySQL",
-            "MSSQL",
           ],
         },
         {
-          name: "GAME DEVELOPMENT & SIMULATION",
-          items: ["Unity", "C# Simulation Development"],
-        },
-        {
-          name: "TOOLS & SYSTEMS",
-          items: ["Git", "GitHub", "Linux", "Windows", "REST APIs"],
+          name: "GAME DEVELOPMENT & TOOLS",
+          items: ["Unity", "Git", "GitHub", "REST APIs"],
         },
       ],
     },
@@ -627,18 +535,16 @@ window.portfolioContent = {
     // --- EDUCATION ---
     education: {
       sectionTitle: "▸ EDUCATION & INTERESTS",
-      degree: "Aerospace Engineering",
-      university: "OSTİM Technical University",
+      degree: "Computer Engineering (Sophomore - GPA: 2.86)",
+      university: "OSTİM Technical University (2024 - Present)",
       interestsTitle: "Areas of Interest",
       interests: [
-        "Aerodynamics",
-        "Fluid mechanics",
-        "Heat transfer",
-        "Propulsion",
-        "CubeSat systems engineering",
-        "Ground station software",
-        "Telemetry systems",
-        "Simulation",
+        "Database Systems",
+        "Object Oriented Programming",
+        "Game Development",
+        "Data Management",
+        "Backend Applications",
+        "Algorithms & Data Structures",
       ],
     },
 
@@ -647,7 +553,7 @@ window.portfolioContent = {
       sectionTitle: "▸ CONTACT",
       title: "Get in Touch",
       description:
-        "Feel free to contact me regarding CubeSat projects, software development, technical collaborations and project opportunities.",
+        "Feel free to contact me regarding software development, internships, collaborations and project opportunities.",
       github: "GitHub",
       linkedin: "LinkedIn",
       email: "Email",
