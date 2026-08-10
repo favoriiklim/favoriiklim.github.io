@@ -250,6 +250,18 @@ window.portfolioContent = {
           technologies: ["Unity", "C#"],
           repoUrl: "https://globalgamejam.org/games/2026/little-mask-2",
           repoLabel: "Oyun Sayfası",
+        },
+        {
+          id: "gelistirjam",
+          name: "GeliştirJam",
+          type: "Game Jam",
+          project: null,
+          teamSize: null,
+          description: "SheerCat tarafından düzenlenen game jam etkinliği.",
+          features: [],
+          technologies: ["Unity", "C#"],
+          repoUrl: "https://iklimm.itch.io/tiger",
+          repoLabel: "Oyun Sayfası",
         }
       ],
       otherJamsTitle: "Diğer Katıldığım Game Jam'ler",
@@ -313,6 +325,7 @@ window.portfolioContent = {
         "Yazılım geliştirme projeleri, staj ve iş birlikleri için bana aşağıdaki kanallardan ulaşabilirsiniz.",
       github: "GitHub",
       linkedin: "LinkedIn",
+      instagram: "Instagram",
       email: "E-posta",
     },
 
@@ -595,6 +608,18 @@ window.portfolioContent = {
           technologies: ["Unity", "C#"],
           repoUrl: "https://globalgamejam.org/games/2026/little-mask-2",
           repoLabel: "Game Page",
+        },
+        {
+          id: "gelistirjam",
+          name: "GeliştirJam",
+          type: "Game Jam",
+          project: null,
+          teamSize: null,
+          description: "Game jam event organized by SheerCat.",
+          features: [],
+          technologies: ["Unity", "C#"],
+          repoUrl: "https://iklimm.itch.io/tiger",
+          repoLabel: "Game Page",
         }
       ],
       otherJamsTitle: "Other Game Jams Attended",
@@ -658,6 +683,7 @@ window.portfolioContent = {
         "Feel free to contact me regarding software development, internships, collaborations and project opportunities.",
       github: "GitHub",
       linkedin: "LinkedIn",
+      instagram: "Instagram",
       email: "Email",
     },
 

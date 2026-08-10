@@ -10,8 +10,9 @@
 
   const LINKS = {
     github: "https://github.com/favoriiklim",
-    linkedin: "https://linkedin.com/in/ilkercoskunsel",
-    email: "mailto:ilker@ilkercoskunsel.com",
+    linkedin: "https://www.linkedin.com/in/ilker-coskunsel-6767ic/",
+    instagram: "https://www.instagram.com/_ilker_c/",
+    email: "mailto:icoskunsel@gmail.com",
     budgetRepo: "https://github.com/GoktugSaylam/Budget",
   };
 
@@ -415,6 +416,7 @@
     setText("contact-description", contact.description);
     setText("contact-github-label", contact.github);
     setText("contact-linkedin-label", contact.linkedin);
+    setText("contact-instagram-label", contact.instagram);
     setText("contact-email-label", contact.email);
   }
 
@@ -548,6 +550,7 @@
   function populateStaticLinks() {
     setHref("contact-github-link", LINKS.github);
     setHref("contact-linkedin-link", LINKS.linkedin);
+    setHref("contact-instagram-link", LINKS.instagram);
     setHref("contact-email-link", LINKS.email);
   }
 
